@@ -5,7 +5,7 @@ public class TankHealth : MonoBehaviour
 {
 	public float m_StartingHealth = 100f;
 	public Slider m_Slider;
-	public Image m_FillImage;
+	public Image m_BackGround;
 	public Color m_FullHealthColor = Color.green;
 	public Color m_ZeroHealthColor = Color.red;
 	public GameObject m_ExplosionPrefab;
@@ -56,7 +56,7 @@ public class TankHealth : MonoBehaviour
 
 		m_Slider.value = m_CurrentHealth;
 
-		m_FillImage.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
+		m_BackGround.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
 
 
 	}
